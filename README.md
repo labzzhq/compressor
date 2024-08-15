@@ -1,15 +1,15 @@
-# compressor
+# @labzzhq/compressor
 
 
-The `compressor` library provides robust compression capabilities for the [Elysia Server](https://elysiajs.com/essential/handler.html#response) and [BunnyHop](https://github.com/labzzhq/bunnyhop) frameworks. It supports `gzip`, `deflate`, and `brotli` compression algorithms.
+The `@labzzhq/compressor` library provides robust compression capabilities for the [Elysia Server](https://elysiajs.com/essential/handler.html#response) and [BunnyHop](https://github.com/labzzhq/bunnyhop) frameworks. It supports `gzip`, `deflate`, and `brotli` compression algorithms.
 
 **Note**: Brotli Compression is only available and supported by Bun v1.1.8 or higher.
 
-`compressor` is a fork of [`compressor`](https://github.com/vermaysha/compressor) by [@vermaysha](https://github.com/vermaysha) with some improvements.
+`@labzzhq/compressor` is a fork of [`elysia-compress`](https://github.com/vermaysha/elysia-compress) by [@vermaysha](https://github.com/vermaysha) with some improvements and extended compatibility to Bunnyhop with [`Effect`](https://effect.website)
 
 ## Installation
 
-To install the `compressor` library, use the following command:
+To install the `@labzzhq/compressor` library, use the following command:
 ```bash
 npm install @labzzhq/compressor
 ```
@@ -17,7 +17,7 @@ npm install @labzzhq/compressor
 
 ## Usage
 
-The `compressor` plugin automatically compresses every response sent by the Elysia or BunnyHop server. It is particularly effective for responses in the form of JSON objects, text, and streams (such as Server-Sent Events).
+The `@labzzhq/compressor` plugin automatically compresses every response sent by the Elysia or BunnyHop server. It is particularly effective for responses in the form of JSON objects, text, and streams (such as Server-Sent Events).
 
 ### Supported Encodings
 
@@ -41,7 +41,7 @@ The global compression hook is enabled by default. To disable it, pass the optio
 
 ```typescript
 import { Elysia } from 'elysia';
-import { compression } from 'compressor';
+import { compression } from '@labzzhq/compressor';
 
 const app = new Elysia()
   .use(
