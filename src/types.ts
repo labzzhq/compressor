@@ -1,5 +1,8 @@
 import type { LifeCycleType } from 'elysia'
-import type { BrotliOptions as brotli_options, ZlibOptions as zlib_options } from 'node:zlib'
+import type {
+  BrotliOptions as brotli_options,
+  ZlibOptions as zlib_options,
+} from 'node:zlib'
 
 export type compression_encoding = 'br' | 'deflate' | 'gzip'
 

@@ -28,7 +28,7 @@ class MemCache {
    * @param {number | bigint} key - The key to get the value from the cache.
    * @return {any} The value from the cache if it exists, otherwise `undefined`.
    */
-  get(key: number | bigint ) {
+  get(key: number | bigint) {
     return this.cache.get(key)
   }
 

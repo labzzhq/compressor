@@ -36,8 +36,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "prepare": "husky",
-    "format": "eslint --fix {./src/,./tests/}*.ts",
-    "lint": "eslint {./src/,./tests/}*.ts",
+    "format": "eslint --fix ./src/**/*.ts ./tests/**/*.ts",
+    "lint": "eslint ./src/**/*.ts ./tests/**/*.ts",
     "build": "rimraf dist && tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
     "test": "bun test --ignore-pattern='node_modules/**'",
     "test:node": "npm install --prefix ./tests/node/cjs/ && npm install --prefix ./tests/node/esm/ && node ./tests/node/cjs/index.js && node ./tests/node/esm/index.js",

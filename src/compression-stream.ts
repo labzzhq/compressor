@@ -12,7 +12,10 @@ import type { compression_encoding, compression_options } from './types'
 export const compression_stream = (
   encoding: compression_encoding,
   options?: compression_options,
-): { readable: ReadableStream<Uint8Array>, writable: WritableStream<Uint8Array> } => {
+): {
+  readable: ReadableStream<Uint8Array>
+  writable: WritableStream<Uint8Array>
+} => {
   const handler = get_compression_handler(encoding, options)
 
   const readable = new ReadableStream<Uint8Array>({
@@ -69,7 +72,8 @@ const get_compression_handler = (
   const brotli_options: zlib.BrotliOptions = {
     params: {
       [zlib.constants.BROTLI_PARAM_MODE]: zlib.constants.BROTLI_MODE_TEXT,
-      [zlib.constants.BROTLI_PARAM_QUALITY]: zlib.constants.BROTLI_DEFAULT_QUALITY,
+      [zlib.constants.BROTLI_PARAM_QUALITY]:
+        zlib.constants.BROTLI_DEFAULT_QUALITY,
     },
     ...options?.brotli_options,
   }
