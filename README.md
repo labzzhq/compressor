@@ -1,5 +1,7 @@
 # compressor
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f2e8239df3cf4b5dbdd0797a60e51070)](https://app.codacy.com/gh/labzzhq/compressor?utm_source=github.com&utm_medium=referral&utm_content=labzzhq/compressor&utm_campaign=Badge_Grade)
+
 
 The `compressor` library provides robust compression capabilities for the [Elysia Server](https://elysiajs.com/essential/handler.html#response) and [BunnyHop](https://github.com/labzzhq/bunnyhop) frameworks. It supports `gzip`, `deflate`, and `brotli` compression algorithms.
 
