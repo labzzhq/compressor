@@ -1,17 +1,17 @@
 {
   "name": "@labzzhq/compressor",
   "description": "Compress, Impress, Progress: Compressor for Web Excellence",
-  "version": "1.0.1",
-  "author": "labzzqh <contact@labzz.io> (https://github.com/labzzqh)",
+  "version": "1.0.0",
+  "author": "labzzhq <contact@labzz.io> (https://github.com/labzzhq)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/labzzqh/compressor.git"
+    "url": "git+https://github.com/labzzhq/compressor.git"
   },
-  "url": "https://github.com/labzzqh/compressor",
+  "url": "https://github.com/labzzhq/compressor",
   "bugs": {
-    "url": "https://github.com/labzzqh/compressor/issues"
+    "url": "https://github.com/labzzhq/compressor/issues"
   },
-  "homepage": "https://github.com/labzzqh/compressor",
+  "homepage": "https://github.com/labzzhq/compressor",
   "keywords": [
     "elysia",
     "compressor",
