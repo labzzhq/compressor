@@ -4,7 +4,7 @@
 coverage = true
 
 # to require 90% line-level and function-level coverage
- coverageThreshold = 0.9
+coverageThreshold = 0.9
 
 coverageReporter  = ["text", "lcov"]  # default ["text"]
- coverageDir = "./reporter"  # default "coverage"
+coverageDir = "./reporter"  # default "coverage"
