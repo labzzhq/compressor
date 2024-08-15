@@ -7,4 +7,4 @@ coverage = true
 coverageThreshold = 0.9
 
 coverageReporter  = ["text", "lcov"]  # default ["text"]
-coverageDir = "./reporter"  # default "coverage"
+coverageDir = "./coverage"  # default "coverage"
