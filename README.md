@@ -1,6 +1,5 @@
 # @labzzhq/compressor
 
-
 The `@labzzhq/compressor` library provides robust compression capabilities for the [Elysia Server](https://elysiajs.com/essential/handler.html#response) and [BunnyHop](https://github.com/labzzhq/bunnyhop) frameworks. It supports `gzip`, `deflate`, and `brotli` compression algorithms.
 
 **Note**: Brotli Compression is only available and supported by Bun v1.1.8 or higher.
@@ -10,10 +9,10 @@ The `@labzzhq/compressor` library provides robust compression capabilities for t
 ## Installation
 
 To install the `@labzzhq/compressor` library, use the following command:
+
 ```bash
 npm install @labzzhq/compressor
 ```
-
 
 ## Usage
 
@@ -40,8 +39,8 @@ To enhance performance, caching compressed responses can significantly reduce se
 The global compression hook is enabled by default. To disable it, pass the option `{ as: 'scoped' }`. For more details, refer to the [Elysia Scope documentation](https://elysiajs.com/essential/scope.html).
 
 ```typescript
-import { Elysia } from 'elysia';
-import { compression } from '@labzzhq/compressor';
+import { Elysia } from 'elysia'
+import { compression } from '@labzzhq/compressor'
 
 const app = new Elysia()
   .use(
@@ -49,9 +48,8 @@ const app = new Elysia()
       as: 'scoped',
     }),
   )
-  .get('/', () => ({ hello: 'world' }));
+  .get('/', () => ({ hello: 'world' }))
 ```
-
 
 ## Compression Options
 
@@ -64,23 +62,20 @@ const app = new Elysia().use(
   compression({
     threshold: 2048,
   }),
-);
+)
 ```
-
 
 ### Disable Compression by Header
 
 You can selectively disable response compression by using the `x-no-compression` header in the request. This option can be disabled by setting `disableByHeader: true`. The default value is `false`.
 
-
 ```typescript
 const app = new Elysia().use(
   compression({
-    disableByHeader: true,
+    disable_by_header: true,
   }),
-);
+)
 ```
-
 
 ### Brotli and Zlib Options
 
@@ -99,9 +94,8 @@ const app = new Elysia().use(
       level: 6,
     },
   }),
-);
+)
 ```
-
 
 ### Customize Encoding Priority
 
@@ -112,9 +106,8 @@ const app = new Elysia().use(
   compression({
     TTL: 3600, // Cache TTL of 1 hour
   }),
-);
+)
 ```
-
 
 ### Cache TTL
 
@@ -125,9 +118,8 @@ const app = new Elysia().use(
   compression({
     encodings: ['deflate', 'gzip'],
   }),
-);
+)
 ```
-
 
 ### Cache Server-Sent Events
 
@@ -138,7 +130,7 @@ const app = new Elysia().use(
   compression({
     compressStream: true,
   }),
-);
+)
 ```
 
 ## License
